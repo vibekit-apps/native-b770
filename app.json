@@ -1,25 +1,23 @@
 {
   "expo": {
-    "name": "My App",
+    "name": "Freyvix Global Inc.",
     "slug": "my-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/freyvix-icon.png",
     "userInterfaceStyle": "automatic",
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
+        "backgroundColor": "#03101e",
+        "foregroundImage": "./assets/freyvix-icon.png"
       },
       "predictiveBackGestureEnabled": false
     },
     "web": {
-      "favicon": "./assets/favicon.png",
+      "favicon": "./assets/freyvix-icon.png",
       "output": "single",
       "bundler": "metro"
     },
@@ -33,9 +31,9 @@
       "policy": "sdkVersion"
     },
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "./assets/freyvix-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#03101e"
     }
   }
 }

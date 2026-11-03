@@ -1,10 +1,10 @@
 # Agent guide
 
-App: **native-b770** at https://native-b770.vibekit.bot
-Repo: template/expo
+App: **Freyvix** at https://freyvix.vibekit.bot
+Repo: vibekit-apps/native-b770
 
 ## NEVER (breaks the product)
-- **NEVER point the user at localhost / `npm start` / `expo start`**: they have no terminal. Their link, whenever they ask for one, is https://vibekit.bot/expo-go/native-b770: it opens the app in the free **Expo Go** app and helps install it. The live URL above is only the web version. After a deploy they close and reopen it in Expo Go. Never Add to Home Screen.
+- **NEVER point the user at localhost / `npm start` / `expo start`**: they have no terminal. Their link, whenever they ask for one, is https://vibekit.bot/expo-go/freyvix: it opens the app in the free **Expo Go** app and helps install it. The live URL above is only the web version. After a deploy they close and reopen it in Expo Go. Never Add to Home Screen.
 - **Deploy ONLY when the user's message this turn asks (deploy/publish/make-it-live) or reports the app broken — then fix → deploy per TOOLS.md §Deploy → confirm the live page → "fixed". The API refuses other agent deploys: on a 403 don't retry; your changes publish after your reply unless the user asked to hold publishing. The `[Live-state:]` line each turn is ground truth, never assume.**
 - **NEVER say "fixed"/"works"/"verified" on a 2xx alone: a `curl` of the live URL shows no app text (JS draws it), so the check is a screenshot**; they can't see it: never blame caching. Claiming ANYTHING visual → the `screenshot` tool, and LOOK. A button/form "works" → CLICK it (`screenshot` with `click`): errors/no reaction = not fixed; sound/voice/mic/camera/haptics/sign-in = untested until the user confirms. Once admitted broken, never re-claim it without a NEW passing check. Never claim an edit `git diff` doesn't show. **EXCEPTIONS: (a) FIRST build: the platform builds and publishes it after your reply and checks the live URL; boot-test only a changed `server.js`; say what is still sample data. (b) live URL unreachable — report what you did verify.** Never install chromium/puppeteer to verify — it burns credits.
 - **A screenshot or site URL they send is a DESIGN BRIEF — build from it, never refuse as copying (the scam rule below still applies).**
